@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     [Header(" Elements ")]
     [SerializeField] private CrowdSystem crowdSystem;
+    [SerializeField] private PlayerAnimator playerAnimator;
 
     [Header(" Settings ")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float roadWidth;
+    private bool canMove;
 
     [Header(" Control ")]
     [SerializeField] private float slideSpeed;
@@ -20,14 +22,17 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.onGameStateChanged += GameStateChangedCallback;
     }
 
     // Update is called once per frame
     void Update()
     {
-        MoveForward();
-        ManageControl();
+        if(canMove)
+        {
+            MoveForward();
+            ManageControl();
+        }
     }
 
     private void ManageControl()
@@ -59,5 +64,22 @@ public class PlayerController : MonoBehaviour
     private void MoveForward()
     {
         transform.position += Vector3.forward * Time.deltaTime * moveSpeed;
+    }
+    private void StartMoving()
+    {
+        canMove = true;
+        playerAnimator.Run();
+    }
+    private void stopMoving()
+    {
+        canMove = false;
+        playerAnimator.Idle();
+    }
+    private void GameStateChangedCallback(GameManager.GameState gameState)
+    {
+        if(gameState == GameManager.GameState.Game)
+        {
+            StartMoving();
+        }
     }
 }
