@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class CrowdSystem : MonoBehaviour
 {
     [Header(" Eelements ")]
     [SerializeField] private Transform runnersParent;
+    [SerializeField] private GameObject runnerPrefab;
 
     [Header(" Settings ")]
     [SerializeField] private float radius;
@@ -43,5 +45,55 @@ public class CrowdSystem : MonoBehaviour
     public float GetCrowdRadius()
     {
         return radius * Mathf.Sqrt(runnersParent.childCount);
+    }
+
+    public void ApplyBonus(BonusType bonusType, int bonusAmount)
+    {
+        switch (bonusType)
+        {
+            case BonusType.Addition:
+                AddRunners(bonusAmount);
+                break;
+
+            case BonusType.Difference:
+                RemoveRunners(bonusAmount);
+                break;
+
+            case BonusType.Product:
+                int runnersToAdd = (runnersParent.childCount * bonusAmount) - runnersParent.childCount;
+                AddRunners(runnersToAdd);
+                break;
+
+            case BonusType.Division:
+                int runnersToRemove = runnersParent.childCount - (runnersParent.childCount / bonusAmount);
+                RemoveRunners(runnersToRemove);
+
+                break;   
+        }
+    }
+
+    private void AddRunners(int bonusAmount)
+    {
+        for (int i = 0; i < bonusAmount; i++)
+        {
+            Instantiate(runnerPrefab, runnersParent);
+        }
+    }
+    private void RemoveRunners(int removeAmount)
+    {
+        if(removeAmount > runnersParent.childCount)
+        {
+            removeAmount = runnersParent.childCount;
+        }
+
+        int runnersAmount = runnersParent.childCount;
+
+        for (int i = runnersAmount - 1; i >= runnersAmount - removeAmount; i--)
+        {
+            Transform runnerToDestroy = runnersParent.GetChild(i);
+            runnerToDestroy.SetParent(null);
+
+            Destroy(runnerToDestroy.gameObject);
+        }
     }
 }

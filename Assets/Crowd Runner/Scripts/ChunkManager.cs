@@ -14,9 +14,9 @@ public class ChunkManager : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
-            Chunk chunkToCreate = chunksPrefabs[Random.Range(0, chunksPrefabs.Length)];
+            Chunk chunkToCreate = chunksPrefabs[i];
 
-            if(i > 0)
+            if (i > 0)
             {
                 chunkPosition.z += chunkToCreate.GetLength() / 2;
             }
