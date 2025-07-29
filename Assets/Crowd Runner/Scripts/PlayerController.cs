@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
+    [Header(" Elements ")]
+    [SerializeField] private Chunk[] chunksPrefabs;
+    [SerializeField] private Chunk[] levelChuncks;
+    private GameObject finishLine;
+  
     [Header(" Elements ")]
     [SerializeField] private CrowdSystem crowdSystem;
     [SerializeField] private PlayerAnimator playerAnimator;
@@ -19,10 +26,27 @@ public class PlayerController : MonoBehaviour
     private Vector3 clickedScreenPosition;
     private Vector3 clickedPlayerPosition;
 
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         GameManager.onGameStateChanged += GameStateChangedCallback;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.onGameStateChanged -= GameStateChangedCallback;
     }
 
     // Update is called once per frame
@@ -70,7 +94,7 @@ public class PlayerController : MonoBehaviour
         canMove = true;
         playerAnimator.Run();
     }
-    private void stopMoving()
+    private void StopMoving()
     {
         canMove = false;
         playerAnimator.Idle();
@@ -80,6 +104,10 @@ public class PlayerController : MonoBehaviour
         if(gameState == GameManager.GameState.Game)
         {
             StartMoving();
+        }
+        else if(gameState == GameManager.GameState.Gameover)
+        {
+            StopMoving();
         }
     }
 }

@@ -8,6 +8,7 @@ public class CrowdSystem : MonoBehaviour
     [Header(" Eelements ")]
     [SerializeField] private Transform runnersParent;
     [SerializeField] private GameObject runnerPrefab;
+    [SerializeField] private PlayerAnimator playerAnimator;
 
     [Header(" Settings ")]
     [SerializeField] private float radius;
@@ -22,7 +23,17 @@ public class CrowdSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!GameManager.instance.IsGameState())
+        {
+            return;
+        }
+
         PlaceRunners();
+
+        if(runnersParent.childCount <= 0)
+        {
+            GameManager.instance.SetGameState(GameManager.GameState.Gameover);
+        }
     }
 
     private void PlaceRunners()
@@ -78,6 +89,8 @@ public class CrowdSystem : MonoBehaviour
         {
             Instantiate(runnerPrefab, runnersParent);
         }
+
+        playerAnimator.Run();
     }
     private void RemoveRunners(int removeAmount)
     {

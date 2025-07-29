@@ -17,7 +17,10 @@ public class PlayerDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DetectDoors();
+        if(GameManager.instance.IsGameState())
+        {
+            DetectDoors();
+        }
     }
 
     private void DetectDoors()
@@ -39,6 +42,7 @@ public class PlayerDetection : MonoBehaviour
             }
             else if(detectedColliders[i].tag == "Finish")
             {
+                PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
                 SceneManager.LoadScene(0);
             }
         }

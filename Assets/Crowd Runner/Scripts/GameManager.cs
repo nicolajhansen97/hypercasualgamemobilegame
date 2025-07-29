@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //PlayerPrefs.DeleteAll();
     }
 
     // Update is called once per frame
@@ -42,5 +42,10 @@ public class GameManager : MonoBehaviour
         onGameStateChanged?.Invoke(gameState);
 
         Debug.Log("Game State changed to : " + gameState);
+    }
+
+    public bool IsGameState()
+    {
+        return gameState == GameState.Game;
     }
 }

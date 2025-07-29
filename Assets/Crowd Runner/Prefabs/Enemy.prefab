@@ -1070,10 +1070,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4167782026886401800}
   - component: {fileID: 3647140574540207541}
-  - component: {fileID: 2918037073041607017}
-  - component: {fileID: 5220253924290875704}
+  - component: {fileID: 8332456797811141859}
   m_Layer: 0
-  m_Name: Runner
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1117,7 +1116,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2918037073041607017
+--- !u!114 &8332456797811141859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1126,23 +1125,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3647140574540207538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 849b604b5eb2d5d458f85fc256ea3c1e, type: 3}
+  m_Script: {fileID: 11500000, guid: 28547f6cf26af004dbbea0cf3d33089d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &5220253924290875704
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3647140574540207538}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 16
-  m_Height: 163
-  m_Direction: 1
-  m_Center: {x: 0, y: 102, z: 0}
+  searchRadius: 10
+  moveSpeed: 15
 --- !u!1 &3931006871986785419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,7 +1182,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 215127890b52f234c80b8cab7a35cb92, type: 2}
+  - {fileID: 2100000, guid: e8cd2b21b6d290449b7c23390d14520b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
