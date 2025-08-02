@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System;
 public class Enemy : MonoBehaviour
 {
     enum State { Idle, Running }
@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float moveSpeed;
     private State state;
     private Transform targetRunner;
+
+    [Header(" Events ")]
+    public static Action onRunnerDied;
 
 
     // Start is called before the first frame update
@@ -73,6 +76,8 @@ public class Enemy : MonoBehaviour
 
         if(Vector3.Distance(transform.position, targetRunner.position) < .1f)
         {
+            onRunnerDied?.Invoke();
+
             Destroy(targetRunner.gameObject);
             Destroy(gameObject);
         }
