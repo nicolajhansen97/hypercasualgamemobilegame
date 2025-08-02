@@ -153,19 +153,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7974288117745390456, guid: ebf56cbd32c44274f8a641ee708d237d, type: 3}
       propertyPath: LeftDoorBonusType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7974288117745390456, guid: ebf56cbd32c44274f8a641ee708d237d, type: 3}
-      propertyPath: rightDoorBonusType
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7974288117745390456, guid: ebf56cbd32c44274f8a641ee708d237d, type: 3}
+      propertyPath: rightDoorBonusType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7974288117745390456, guid: ebf56cbd32c44274f8a641ee708d237d, type: 3}
       propertyPath: leftDoorBonusAmount
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7974288117745390456, guid: ebf56cbd32c44274f8a641ee708d237d, type: 3}
       propertyPath: rightDoorBonusAmount
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7974288117745390457, guid: ebf56cbd32c44274f8a641ee708d237d, type: 3}
       propertyPath: m_RootOrder

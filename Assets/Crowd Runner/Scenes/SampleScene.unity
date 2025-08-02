@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.45, g: 0.9, b: 0.45, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2996,6 +2996,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - {fileID: 11400000, guid: 40e3efcf4547aea498fcc7c5013dd5f2, type: 2}
+  - {fileID: 11400000, guid: 4343ff08ac4111e49998ffb6f7c3801c, type: 2}
+  - {fileID: 11400000, guid: ac4b602ccf823344484bd919a89b7ccb, type: 2}
+  - {fileID: 11400000, guid: 850e4b99c06e6bf4b8cc932d56653f6e, type: 2}
 --- !u!1 &1404142889
 GameObject:
   m_ObjectHideFlags: 0
