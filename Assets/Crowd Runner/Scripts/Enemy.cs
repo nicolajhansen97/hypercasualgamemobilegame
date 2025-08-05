@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 public class Enemy : MonoBehaviour
 {
     enum State { Idle, Running }
