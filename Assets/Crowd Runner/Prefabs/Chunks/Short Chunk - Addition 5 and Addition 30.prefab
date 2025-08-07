@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 7454597274678364834}
   - component: {fileID: 7454597274678364845}
   m_Layer: 0
-  m_Name: Short Chunk 00
+  m_Name: Short Chunk - Addition 5 and Addition 30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,10 +151,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7454597274678364834}
     m_Modifications:
-    - target: {fileID: 7974288117745390456, guid: ebf56cbd32c44274f8a641ee708d237d, type: 3}
-      propertyPath: LeftDoorBonusType
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7974288117745390456, guid: ebf56cbd32c44274f8a641ee708d237d, type: 3}
       propertyPath: rightDoorBonusType
       value: 0
