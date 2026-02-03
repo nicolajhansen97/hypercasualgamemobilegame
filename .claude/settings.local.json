@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" branch -a)",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" branch:*)",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" show V.1.5:\"Assets/Crowd Runner/Scripts/PlayerDetection.cs\")",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" ls-tree:*)",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" show V.1.5:ProjectSettings/TagManager.asset)",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" checkout V.1.5 -- \"Assets/Crowd Runner/Prefabs/Coin.prefab\" \"Assets/Crowd Runner/Prefabs/Coin.prefab.meta\")",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" checkout V.1.5 -- \"Assets/Crowd Runner/Prefabs/Chunks/Long Chunk 10 Coins.prefab\" \"Assets/Crowd Runner/Prefabs/Chunks/Long Chunk 10 Coins.prefab.meta\")",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" status)",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" restore \"Assets/Crowd Runner/Prefabs/Coin.prefab\" \"Assets/Crowd Runner/Prefabs/Coin.prefab.meta\" \"Assets/Crowd Runner/Prefabs/Chunks/Long Chunk 10 Coins.prefab\" \"Assets/Crowd Runner/Prefabs/Chunks/Long Chunk 10 Coins.prefab.meta\" \"Assets/Crowd Runner/Scripts/PlayerDetection.cs\" \"Assets/Crowd Runner/Scripts/PlayerDetection.cs.meta\")",
+      "Bash(for f in *.prefab.meta)",
+      "Bash(done)",
+      "Bash(cmd.exe /c \"python --version\")",
+      "Bash(node:*)",
+      "Bash(ls:*)",
+      "Bash(pacman:*)",
+      "Bash(cmd.exe /c \"python -c \"\"print\\(''hello''\\)\"\"\")",
+      "Bash(awk:*)",
+      "Bash(perl --version:*)",
+      "Bash(perl -e:*)",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" checkout -- \"Assets/Crowd Runner/Prefabs/Chunks/Medium Chunk.prefab\")"
+    ]
+  }
+}
