@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" log --oneline)",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" log --all --oneline --graph)",
+      "Bash(git -C \"C:\\\\Users\\\\nicol\\\\Documents\\\\GitHub\\\\hypercasualgamemobilegame\" show c6c83c3 --stat)",
+      "Bash(find:*)",
+      "Bash(git clone:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:nicolajhansen97.github.io)",
+      "Bash(gh api:*)",
+      "Bash(where:*)",
+      "Bash(where.exe:*)"
+    ]
+  }
+}
